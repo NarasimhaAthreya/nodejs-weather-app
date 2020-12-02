@@ -18,7 +18,7 @@ yargs.command({
                 console.log("Something wrong with reqest")
             } else {
                 console.log("This is from callback function ")
-                console.log(name.temperature)
+                console.log(name)
             }
             })
     }
