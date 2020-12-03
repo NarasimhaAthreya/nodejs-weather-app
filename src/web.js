@@ -20,7 +20,15 @@ console.log(req.query)
             appName: "Weather Application",
             Place: data.location.name,
             Temp: data.current.temperature,
-            icon: data.current.weather_icons[0]
+            icon: data.current.weather_icons[0],
+            Country: data.location.country,
+            localtime: data.location.localtime,
+            observationtime: data.current.observation_time,
+            weatherdesc: data.current.weather_descriptions[0],
+            windspeed: data.current.wind_speed,
+            winddirection: data.current.wind_dir,
+            humidity: data.current.humidity,
+            feelslike: data.current.feelslike
         }
         res.render("index", weather)
     })
