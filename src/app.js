@@ -12,6 +12,9 @@ const weather = (place, callback) => {
     req({ url: url, json:true },(error,response) => {
         if(error) {
             console.log("Something went wrong with request -- From App.js")
+        } else if(response.error){
+
+            const output = response.error 
         } else {
            const output = response.body
            callback(error,output)

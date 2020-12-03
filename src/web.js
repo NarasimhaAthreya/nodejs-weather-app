@@ -15,6 +15,12 @@ app.get("/weather", (req, res) => {
 console.log(req.query)
 
  app1(req.query.place,(error,data) => {
+     if(error) {
+
+        res.redirect("/")
+     } else if (data.error){
+         res.redirect("/")
+     }else{
 
         var weather = {
             appName: "Weather Application",
@@ -31,8 +37,9 @@ console.log(req.query)
             feelslike: data.current.feelslike
         }
         res.render("index", weather)
+    }
     })
-  
+
 })
 
 app.get("/", (req, res) => {
