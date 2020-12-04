@@ -19,7 +19,11 @@ console.log(req.query)
 
         res.redirect("/")
      } else if (data.error){
-         res.redirect("/")
+         var data = {
+             error : data.error.info
+         }
+
+         res.render("input",data)
      }else{
 
         var weather = {
