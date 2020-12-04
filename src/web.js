@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
 const app1 = require('./app.js')
+const port = process.env.PORT
 //require('bootstrap')
 
 const app = express()
@@ -50,6 +51,6 @@ app.get("/", (req, res) => {
 
     res.render("input")
 })
-app.listen(3000,()=>{
-    console.log("Server is up")
+app.listen(port,()=>{
+    console.log("Server is up "+port)
 })
