@@ -1,0 +1,5 @@
+sudo: requried
+services:
+  - docker
+before_install:
+  - docker build -t athreya619/weatherapp -f Dockerfile

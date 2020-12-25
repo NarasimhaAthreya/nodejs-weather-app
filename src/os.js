@@ -2,7 +2,7 @@ const req = require("request")
 
 const systemInfo = (callback) => {
 
-    var url = "http://localhost:8080/details"
+    var url = "http://javaapp:8080/details"
     req({ url: url, json: true }, (error, response) => {
         if (error) {
             console.log("Something wrong in connection to url " + url)
